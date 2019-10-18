@@ -2,7 +2,7 @@
 #
 #SBATCH --job-name=test
 #SBATCH --output=res.txt
-#SBATCH --cpu-per-task=10
+#SBATCH --cpus-per-task=10
 #SBATCH --ntasks=1
 #SBATCH --time=00:35:00
 #SBATCH --mem-per-cpu=100
