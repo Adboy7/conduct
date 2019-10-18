@@ -32,6 +32,13 @@ for i in $(seq 0.0 0.01 1.0);
         echo "d==$i ----- " 
         time ./conducting 1 150 $i 5000
 done
+echo "d precise"
+export OMP_NUM_THREADS=10
+for i in $(seq 0.20 0.001 0.25);
+    do
+        echo "d==$i ----- " 
+        time ./conducting 1 150 $i 5000
+done
 
 echo "N"
 echo "N==100"
