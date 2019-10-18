@@ -4,7 +4,7 @@
 #SBATCH --output=res.txt
 #
 #SBATCH --ntasks=1
-#SBATCH --time=10:00
+#SBATCH --time=00:35:00
 #SBATCH --mem-per-cpu=100
 
 echo "Thread"
@@ -26,7 +26,7 @@ time ./conducting 1  150 0.23 5000
 echo "--------------------"
 
 echo "d"
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export OMP_NUM_THREADS=10
 for i in $(seq 0.0 0.01 1.0);
     do
         echo "d==$i ----- " 
